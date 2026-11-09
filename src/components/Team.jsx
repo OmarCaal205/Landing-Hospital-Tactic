@@ -4,12 +4,12 @@ export default function Team() {
   return (
     <section id="equipo" className="section section--tint">
       <div className="container">
-        <h2 className="title">Tu salud en manos expertas</h2>
-        <p className="sub">Conoce a los médicos que te atienden con dedicación y calidez.</p>
+        <h2 className="title">Tu salud en manos del equipo</h2>
+        <p className="sub">Pediatría, traumatología, cirugía, ginecología y obstetricia.</p>
         <div className="grid grid--4">
           {EQUIPO.map(m => (
-            <article className="doc" key={m.nombre}>
-              <img src={m.foto} alt={m.nombre} loading="lazy" />
+            <article className={`doc ${m.ancha ? 'doc--ancha' : ''}`} key={m.nombre}>
+              <img src={m.foto} alt="" width={m.ancho} height={m.alto} loading="lazy" />
               <div className="doc__body">
                 <h3>{m.nombre}</h3>
                 <p className="doc__esp">{m.especialidad}</p>

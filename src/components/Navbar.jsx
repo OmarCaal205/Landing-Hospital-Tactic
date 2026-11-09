@@ -1,24 +1,32 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { INFO } from '../data'
 
 const LINKS = [['Servicios', '#servicios'], ['Nosotros', '#nosotros'], ['Equipo', '#equipo'], ['Preguntas', '#preguntas'], ['Ubicación', '#ubicacion']]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
-    const f = () => setScrolled(window.scrollY > 30)
-    window.addEventListener('scroll', f)
-    return () => window.removeEventListener('scroll', f)
+    const onKey = event => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
   }, [])
   return (
-    <header className={`nav ${scrolled ? 'nav--solid' : ''}`}>
+    <header className="nav">
       <div className="container nav__in">
-        <a href="#inicio" className="nav__brand"><img src="/img/logo.png" alt="Logo Centro Médico Verapaz" /><span>Centro Médico <b>Verapaz</b></span></a>
-        <button className="nav__toggle" onClick={() => setOpen(!open)} aria-label="Abrir menú" aria-expanded={open}>{open ? '✕' : '☰'}</button>
-        <nav className={`nav__links ${open ? 'is-open' : ''}`}>
-          {LINKS.map(([t, h]) => <a key={h} href={h} onClick={() => setOpen(false)}>{t}</a>)}
-          <a className="btn btn--green" href={`tel:${INFO.telefono}`}>Llamar {INFO.telefono}</a>
+        <a href="#inicio" className="nav__brand" onClick={() => setOpen(false)}>
+          <img src="/img/logo.png" alt="" width="46" height="46" />
+          <span>Centro Médico <b>Verapaz</b></span>
+        </a>
+        <button className="nav__toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>
+          {open ? '✕' : '☰'}
+        </button>
+        <nav className={`nav__links ${open ? 'is-open' : ''}`} aria-label="Secciones">
+          {LINKS.map(([label, href]) => (
+            <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
+          ))}
+          <a className="btn btn--green" href={`tel:${INFO.telefonoHref}`}>Llamar {INFO.telefono}</a>
         </nav>
       </div>
     </header>

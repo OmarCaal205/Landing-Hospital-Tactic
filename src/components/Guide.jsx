@@ -13,9 +13,10 @@ export default function Guide() {
             <a className="btn btn--green" href="#contacto">Agendar consulta</a>
           </article>
           <article className="guide__card guide__card--urg">
-            <h3>Ve a urgencias si hay</h3>
+            <h3>Llama o ven de inmediato si hay</h3>
             <ul className="checks checks--red">{URGENCIAS.map(c => <li key={c}>{c}</li>)}</ul>
-            <a className="btn btn--red" href={`tel:${INFO.telefono}`}>Llamar {INFO.telefono}</a>
+            <a className="btn btn--red" href={`tel:${INFO.telefonoHref}`}>Llamar {INFO.telefono}</a>
+            <p className="note">Esta lista solo orienta. No reemplaza una valoración médica.</p>
           </article>
         </div>
       </div>
