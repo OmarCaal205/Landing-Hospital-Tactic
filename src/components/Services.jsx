@@ -4,7 +4,7 @@ export default function Services() {
   return (
     <section id="servicios" className="section">
       <div className="container">
-        <h2 className="title">Lo que ofrece un hospital general</h2>
+        <h2 className="title">Servicios de hospital en el centro</h2>
         <p className="sub">Urgencias, camas, quirófano, partos y diagnóstico. No solo un consultorio.</p>
         <div className="grid">
           {SERVICIOS.map(s => (
@@ -17,7 +17,7 @@ export default function Services() {
             </article>
           ))}
         </div>
-        <h3 className="apoyo__title">También forman parte del hospital</h3>
+        <h3 className="apoyo__title">También forman parte del centro</h3>
         <div className="apoyo">
           {APOYO.map(a => (
             <article key={a.titulo}>

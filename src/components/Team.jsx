@@ -5,7 +5,7 @@ export default function Team() {
     <section id="equipo" className="section section--tint">
       <div className="container">
         <h2 className="title">Tu salud en manos del equipo</h2>
-        <p className="sub">Pediatría, traumatología, cirugía, ginecología y obstetricia.</p>
+        <p className="sub">Estos cinco especialistas atienden en el centro. Enfermería, laboratorio y farmacia completan cada turno.</p>
         <div className="grid grid--4">
           {EQUIPO.map(m => (
             <article className={`doc ${m.ancha ? 'doc--ancha' : ''}`} key={m.nombre}>

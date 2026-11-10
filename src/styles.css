@@ -39,11 +39,12 @@ a{color:inherit;text-decoration:none}
 .hero__in{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
 .pill{display:inline-block;background:rgba(255,255,255,.16);padding:.35rem 1rem;border-radius:999px;font-size:.95rem;font-weight:600;margin-bottom:1rem}
 .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.12;font-weight:700;margin-bottom:1rem}
-.mark{background:var(--green-soft);color:var(--ink);padding:0 .28em;border-radius:8px}
+.mark{color:#d9f99d}
 .hero p{font-size:1.12rem;max-width:38rem;margin-bottom:1.5rem}
 .hero__cta{display:flex;gap:.8rem;flex-wrap:wrap}
-.hero__q{margin-top:1.3rem;margin-bottom:0;font-size:1rem;font-weight:600}
-.hero__media img{width:100%;border-radius:28px;background:#fff;box-shadow:0 24px 50px -24px rgba(0,20,40,.55);object-fit:cover;aspect-ratio:16/10}
+.hero .hero__q{margin:1.3rem 0 0;font-size:1.05rem;font-weight:700}
+.hero .hero__q-es{margin:.25rem 0 0;font-size:.98rem;font-weight:500}
+.hero__media img{width:100%;border-radius:28px;background:#e8f3f8;box-shadow:0 24px 50px -24px rgba(0,20,40,.55);object-fit:cover;object-position:center;aspect-ratio:1280/575}
 .stats{background:var(--ink);color:#fff;padding:1.6rem 0}
 .stats__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));text-align:center;gap:1rem}
 .stats strong{display:block;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--green-soft);font-weight:700}
@@ -67,8 +68,8 @@ a{color:inherit;text-decoration:none}
 .apoyo p{color:var(--muted);font-size:.95rem}
 .grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
 .doc{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
-.doc img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%;background:#e8f3f8}
-.doc--ancha img{aspect-ratio:16/9;object-position:center}
+.doc img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;background:#e8f3f8}
+.doc--ancha img{aspect-ratio:4/3;object-position:center 12%}
 .doc__body{padding:1.1rem 1.15rem 1.3rem}
 .doc__esp{color:var(--blue);font-weight:700;margin:.2rem 0 .7rem}
 .doc ul{list-style:none;display:grid;gap:.35rem;color:var(--muted)}
