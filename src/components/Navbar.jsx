@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { INFO } from '../data'
+import { INFO, asset } from '../data'
 
 const LINKS = [['Servicios', '#servicios'], ['Nosotros', '#nosotros'], ['Equipo', '#equipo'], ['Preguntas', '#preguntas'], ['Ubicación', '#ubicacion']]
 
@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="nav">
       <div className="container nav__in">
         <a href="#inicio" className="nav__brand" onClick={() => setOpen(false)}>
-          <img src="/img/logo.png" alt="" width="46" height="46" />
+          <img src={asset('img/logo.png')} alt="" width="46" height="46" />
           <span>Centro Médico <b>Verapaz</b></span>
         </a>
         <button className="nav__toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>

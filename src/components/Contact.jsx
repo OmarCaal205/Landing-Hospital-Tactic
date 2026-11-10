@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { INFO, SERVICIOS } from '../data'
+import { APOYO, INFO, SERVICIOS } from '../data'
 
 const VACIO = { nombre: '', telefono: '', servicio: '', mensaje: '', acepta: false }
 
@@ -43,7 +43,7 @@ export default function Contact() {
             <span>Motivo</span>
             <select name="servicio" value={f.servicio} onChange={change}>
               <option value="">Elige un servicio</option>
-              {SERVICIOS.map(s => <option key={s.titulo}>{s.titulo}</option>)}
+              {[...SERVICIOS, ...APOYO].map(s => <option key={s.titulo}>{s.titulo}</option>)}
             </select>
           </label>
           <label>
